@@ -1,6 +1,6 @@
 
 import RiskMatrix from './components/RiskMatrix'
-
+import { React} from  "react"
 function App() {
 
   return (
