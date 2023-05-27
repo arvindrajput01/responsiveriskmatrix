@@ -1,5 +1,5 @@
 import React from 'react'
-
+{/* First design it statically then dynamically passing data using array */}
 const RiskMatrix = () => {
     const riskMatrixData = [
         [{id: 0,val: 1},{id:1 ,val: 2},{id:2 ,val: 3},{id: 3,val: 4},{id:4 , val: 5}],
@@ -17,7 +17,8 @@ const RiskMatrix = () => {
          
          {/* Start Horizontal Heading Likelihood */}
       <div className=" max-w-[1400px] max-auto grid  grid-rows-1 grid-cols-6  gap-0  text-center  justify-center items-center ">
-         <div className=" h-16  col-start-4 col-end-5 flex	text-2xl font-bold justify-center items-center" >Likelihood</div>
+         <div className="hidden md:block h-16  col-start-4 col-end-5 	text-2xl font-bold justify-center items-center" >Likelihood</div>
+         <div className="sm:hidden h-16  col-span-6 pt-6	text-xs font-bold justify-center items-center" >Likelihood X Consequences</div>
       </div>
       {/* End Horizontal Heading Likelihood */}
        {/* Start Vertical  Column Heading */}
@@ -32,9 +33,9 @@ const RiskMatrix = () => {
       {/* End Vertical  Column Heading */}
       <div className=" max-w-[1400px] max-auto grid  grid-rows-5 grid-cols-6 gap-1  text-center  justify-center items-center ">
           <div className=" w-full  h-full row-span-5 flex justify-center text-center item-center" >
-            <div className="max-w-[150px] grid  grid-rows-5 grid-cols-2 gap-1  text-center  justify-center items-center">
+            <div className="max-w-[150px] grid  grid-rows-5 sm:grid-cols-1 md:grid-cols-2 gap-1  text-center  justify-center items-center">
                 {/* Start Vertical Heading text rotate 90 degree */}
-                <div className="  w-[20px] h-10 row-span-5 flex justify-center items-center transform -rotate-90 text-2xl font-bold" >Impact</div>
+                <div className="hidden md:block w-[20px] h-10 row-span-5  justify-center items-center transform -rotate-90 text-2xl font-bold" >Impact</div>
                 {/* End Vertical Heading text rotate 90 degree */}
                   {/* Start Rows Heading   */}
                 <div className="  md:w-[75px] sm:w-full h-16 lg:w-[118px]  flex justify-center text-center truncate hover:scale-110 duration-500 items-center border-2  border-gray-200 text-xs " >Catastrophic</div>
